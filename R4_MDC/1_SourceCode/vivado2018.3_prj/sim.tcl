@@ -1,0 +1,1 @@
+launch_simulation -mode behavioral -scripts_only

@@ -1,0 +1,90 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Thu Jul 13 16:21:12 2023
+# Process ID: 13076
+# Current directory: E:/postgraduate/contest/LongX/A7/提交/R4_MDC/1_SourceCode/vivado2018.3_prj
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent25304 E:\postgraduate\contest\LongX\A7\提交\R4_MDC\1_SourceCode\vivado2018.3_prj\SDF_FFT_1024.xpr
+# Log file: E:/postgraduate/contest/LongX/A7/提交/R4_MDC/1_SourceCode/vivado2018.3_prj/vivado.log
+# Journal file: E:/postgraduate/contest/LongX/A7/提交/R4_MDC/1_SourceCode/vivado2018.3_prj\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/postgraduate/contest/LongX/A7/提交/R4_MDC/1_SourceCode/vivado2018.3_prj/SDF_FFT_1024.xpr
+INFO: [Project 1-313] Project file moved from 'E:/postgraduate/contest/LongX/A7/R4_MDC/1234567890/SDF_FFT_1.0/1_SourceCode/vivado2018.3_prj' since last save.
+WARNING: [filemgmt 56-2] IP Repository Path: Could not find the directory 'E:/postgraduate/contest/LongX/A7/提交/IP_SDF_FFT_1024', nor could it be found using path 'E:/postgraduate/contest/LongX/A7/R4_MDC/1234567890/IP_SDF_FFT_1024'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'e:/postgraduate/contest/LongX/A7/提交/IP_SDF_FFT_1024'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Vivado/Install/Vivado/2020.2/data/ip'.
+open_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1120.402 ; gain = 0.000
+reset_run synth_2
+launch_runs synth_2 -jobs 20 -scripts_only
+launch_simulation -install_path E:/Modelsim/install/win64 -gcc_install_path E:/Modelsim/install/Vivado2020_2_lib
+Command: launch_simulation -install_path E:/Modelsim/install/win64 -gcc_install_path E:/Modelsim/install/Vivado2020_2_lib
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/postgraduate/contest/LongX/A7/提交/R4_MDC/1_SourceCode/vivado2018.3_prj/SDF_FFT_1024.sim/sim_1/behav/modelsim'
+INFO: [USF-ModelSim-47] Finding simulator installation...
+INFO: [USF-ModelSim-50] Using simulator executables from 'E:/Modelsim/install/win64/vsim.exe'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-modelsim-7] Finding pre-compiled libraries...
+INFO: [USF-modelsim-11] File 'E:/Modelsim/install/Vivado2020_2_lib/modelsim.ini' copied to run dir:'E:/postgraduate/contest/LongX/A7/提交/R4_MDC/1_SourceCode/vivado2018.3_prj/SDF_FFT_1024.sim/sim_1/behav/modelsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_mdc_fft_1024_top' in fileset 'sim_1'...
+INFO: [USF-ModelSim-107] Finding global include files...
+INFO: [USF-ModelSim-108] Finding include directories and verilog header directory paths...
+INFO: [USF-ModelSim-110] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-ModelSim-111] Fetching design files from 'sim_1'...
+INFO: [USF-ModelSim-2] ModelSim::Compile design
+INFO: [USF-ModelSim-15] Creating automatic 'do' files...
+INFO: [USF-ModelSim-69] Executing 'COMPILE and ANALYZE' step in 'E:/postgraduate/contest/LongX/A7/提交/R4_MDC/1_SourceCode/vivado2018.3_prj/SDF_FFT_1024.sim/sim_1/behav/modelsim'
+Reading E:/Modelsim/install/tcl/vsim/pref.tcl
+
+# 10.4
+
+# do {tb_mdc_fft_1024_top_compile.do}
+# ** Warning: (vlib-34) Library already exists at "modelsim_lib/work".
+# 
+# ** Warning: (vlib-34) Library already exists at "modelsim_lib/msim".
+# 
+# ** Warning: (vlib-34) Library already exists at "modelsim_lib/msim/xil_defaultlib".
+# 
+# Model Technology ModelSim SE-64 vmap 10.4 Lib Mapping Utility 2014.12 Dec  3 2014
+# vmap xil_defaultlib modelsim_lib/msim/xil_defaultlib 
+# Modifying modelsim.ini
+# ** Error: Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 16:22:21 on Jul 13,2023
+# vlog -incr -work xil_defaultlib ../../../../SDF_FFT_1024.srcs/sources_1/new/butterfly.v ../../../../SDF_FFT_1024.srcs/sources_1/new/complex_mul.v ../../../../SDF_FFT_1024.srcs/sources_1/new/mdc_unit.v ../../../../SDF_FFT_1024.srcs/sources_1/new/twiddle_rom_1024.v ../../../../SDF_FFT_1024.srcs/sources_1/new/mdc_fft_1024_top.v ../../../../SDF_FFT_1024.srcs/sources_1/new/After_Convert.v ../../../../SDF_FFT_1024.srcs/sources_1/new/delay_buffer.v ../../../../SDF_FFT_1024.srcs/sources_1/new/Before_Convert.v ../../../../SDF_FFT_1024.srcs/sources_1/new/Data_Convert.v ../../../../SDF_FFT_1024.srcs/sim_1/new/tb_mdc_fft_1024_top.v 
+# init_dbinfo() DATABASE ERROR: (sqlite3_open E:/postgraduate/contest/LongX/A7/?á??/R4_MDC/1_SourceCode/vivado2018.3_prj/SDF_FFT_1024.sim/sim_1/behav/modelsim/modelsim_lib/msim/xil_defaultlib/_lib.qdb): unable to open database file
+# mtilibWrite(): Unexpected null object encountered
+# ** Fatal: (vlog-9) Problem while writing token file "E:/postgraduate/contest/LongX/A7/?á??/R4_MDC/1_SourceCode/vivado2018.3_prj/SDF_FFT_1024.sim/sim_1/behav/modelsim/modelsim_lib/msim/xil_defaultlib/_temp/vlogw4dv65".
+# 
+# ?????????????¨???????? (GetLastError() = 2)
+# ** Error: ../../../../SDF_FFT_1024.srcs/sources_1/new/butterfly.v(23): Verilog Compiler exiting
+# End time: 16:22:21 on Jul 13,2023, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+# sqlite3_open_v2: No such file or directory
+# Error in macro ./tb_mdc_fft_1024_top_compile.do line 27
+# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 16:22:21 on Jul 13,2023
+# vlog -incr -work xil_defaultlib ../../../../SDF_FFT_1024.srcs/sources_1/new/butterfly.v ../../../../SDF_FFT_1024.srcs/sources_1/new/complex_mul.v ../../../../SDF_FFT_1024.srcs/sources_1/new/mdc_unit.v ../../../../SDF_FFT_1024.srcs/sources_1/new/twiddle_rom_1024.v ../../../../SDF_FFT_1024.srcs/sources_1/new/mdc_fft_1024_top.v ../../../../SDF_FFT_1024.srcs/sources_1/new/After_Convert.v ../../../../SDF_FFT_1024.srcs/sources_1/new/delay_buffer.v ../../../../SDF_FFT_1024.srcs/sources_1/new/Before_Convert.v ../../../../SDF_FFT_1024.srcs/sources_1/new/Data_Convert.v ../../../../SDF_FFT_1024.srcs/sim_1/new/tb_mdc_fft_1024_top.v 
+# init_dbinfo() DATABASE ERROR: (sqlite3_open E:/postgraduate/contest/LongX/A7/?á??/R4_MDC/1_SourceCode/vivado2018.3_prj/SDF_FFT_1024.sim/sim_1/behav/modelsim/modelsim_lib/msim/xil_defaultlib/_lib.qdb): unable to open database file
+# mtilibWrite(): Unexpected null object encountered
+# ** Fatal: (vlog-9) Problem while writing token file "E:/postgraduate/contest/LongX/A7/?á??/R4_MDC/1_SourceCode/vivado2018.3_prj/SDF_FFT_1024.sim/sim_1/behav/modelsim/modelsim_lib/msim/xil_defaultlib/_temp/vlogw4dv65".
+# 
+# ?????????????¨???????? (GetLastError() = 2)
+# ** Error: ../../../../SDF_FFT_1024.srcs/sources_1/new/butterfly.v(23): Verilog Compiler exiting
+# End time: 16:22:21 on Jul 13,2023, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+# sqlite3_open_v2: No such file or directory
+#     while executing
+# "exec <nul: {E:\Modelsim\install\win64\vlog.EXE} -incr -work xil_defaultlib ../../../../SDF_FFT_1024.srcs/sources_1/new/butterfly.v ../../../../SDF_FFT..."
+#     ("uplevel" body line 1)
+#     invoked from within
+# "uplevel 1 exec $redir $new [lrange $args 1 end]"
+#     (procedure "::unknown" line 47)
+#     invoked from within
+# "E:\\Modelsim\\install\\win64\\vlog  -incr -work xil_defaultlib  \
+# "../../../../SDF_FFT_1024.srcs/sources_1/new/butterfly.v" \
+# "../../../../SDF_FFT_102..."
+ModelSim> 

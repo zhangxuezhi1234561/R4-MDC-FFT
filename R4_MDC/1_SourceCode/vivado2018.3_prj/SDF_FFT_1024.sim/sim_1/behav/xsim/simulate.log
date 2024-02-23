@@ -1,0 +1,3 @@
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+$finish called at time : 41531 ns : File "D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sim_1/new/tb_sdf_fft_1024_top.v" Line 61

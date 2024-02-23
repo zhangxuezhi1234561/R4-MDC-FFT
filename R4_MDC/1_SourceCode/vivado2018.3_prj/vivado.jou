@@ -1,0 +1,21 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Fri Aug 18 09:34:42 2023
+# Process ID: 10740
+# Current directory: E:/postgraduate/contest/LongX/A7/作品提交文档/90013835源码/R4_MDC/1_SourceCode/vivado2018.3_prj
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8512 E:\postgraduate\contest\LongX\A7\作品提交文档\90013835源码\R4_MDC\1_SourceCode\vivado2018.3_prj\SDF_FFT_1024.xpr
+# Log file: E:/postgraduate/contest/LongX/A7/作品提交文档/90013835源码/R4_MDC/1_SourceCode/vivado2018.3_prj/vivado.log
+# Journal file: E:/postgraduate/contest/LongX/A7/作品提交文档/90013835源码/R4_MDC/1_SourceCode/vivado2018.3_prj\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/postgraduate/contest/LongX/A7/作品提交文档/90013835源码/R4_MDC/1_SourceCode/vivado2018.3_prj/SDF_FFT_1024.xpr
+set_property board_part xilinx.com:vc709:part0:1.8 [current_project]
+reset_run synth_2
+launch_runs synth_2 -jobs 10
+wait_on_run synth_2
+set_property part xcvu095-ffva2104-2-i [current_project]
+reset_run synth_2
+launch_runs synth_2 -jobs 10
+wait_on_run synth_2

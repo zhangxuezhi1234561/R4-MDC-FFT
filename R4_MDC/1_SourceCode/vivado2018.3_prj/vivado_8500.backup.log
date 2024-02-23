@@ -1,0 +1,23 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Thu Jul 13 17:10:31 2023
+# Process ID: 8500
+# Current directory: E:/postgraduate/contest/LongX/A7/tijiao/R4_MDC/1_SourceCode/vivado2018.3_prj
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8924 E:\postgraduate\contest\LongX\A7\tijiao\R4_MDC\1_SourceCode\vivado2018.3_prj\SDF_FFT_1024.xpr
+# Log file: E:/postgraduate/contest/LongX/A7/tijiao/R4_MDC/1_SourceCode/vivado2018.3_prj/vivado.log
+# Journal file: E:/postgraduate/contest/LongX/A7/tijiao/R4_MDC/1_SourceCode/vivado2018.3_prj\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/postgraduate/contest/LongX/A7/tijiao/R4_MDC/1_SourceCode/vivado2018.3_prj/SDF_FFT_1024.xpr
+WARNING: [filemgmt 56-3] IP Repository Path: Could not find the directory 'E:/postgraduate/contest/LongX/A7/tijiao/IP_SDF_FFT_1024'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'e:/postgraduate/contest/LongX/A7/tijiao/IP_SDF_FFT_1024'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Vivado/Install/Vivado/2020.2/data/ip'.
+open_project: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 1121.422 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Jul 13 17:12:39 2023...

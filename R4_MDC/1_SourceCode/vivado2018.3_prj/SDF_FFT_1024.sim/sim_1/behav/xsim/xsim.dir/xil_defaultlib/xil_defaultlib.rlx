@@ -1,0 +1,19 @@
+0.6
+2018.3
+Dec  7 2018
+00:33:28
+D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.sim/sim_1/behav/xsim/glbl.v,1544155481,verilog,,,,glbl,,,,,,,,
+D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sim_1/new/tb_butterfly.v,1681359378,verilog,,,,tb_butterfly,,,,,,,,
+D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sim_1/new/tb_complex_mul.v,1681365895,verilog,,,,tb_complex_mul,,,,,,,,
+D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sim_1/new/tb_sdf_fft_1024_top.v,1681462992,verilog,,,,tb_sdf_fft_1024_top,,,,,,,,
+D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sim_1/new/tb_sdf_fft_8_top.v,1681446347,verilog,,,,tb_sdf_fft_8_top,,,,,,,,
+D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sim_1/new/tb_sdf_unit.v,1681381487,verilog,,,,tb_sdf_unit,,,,,,,,
+D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/butterfly.v,1681447147,verilog,,D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/complex_mul.v,,butterfly,,,,,,,,
+D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/complex_mul.v,1681462643,verilog,,D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/delay_buffer.v,,complex_mul,,,,,,,,
+D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/delay_buffer.v,1681359536,verilog,,D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_fft_1024_top.v,,delay_buffer,,,,,,,,
+D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_fft_1024_top.v,1681458478,verilog,,D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v,,sdf_fft_1024_top,,,,,,,,
+D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_fft_8_top.v,1681447999,verilog,,D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v,,sdf_fft_8_top,,,,,,,,
+D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v,1681462715,verilog,,D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/twiddle_1024.v,,sdf_unit,,,,,,,,
+D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sync_fifo.v,1681304625,verilog,,D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sim_1/new/tb_butterfly.v,,sync_fifo,,,,,,,,
+D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/twiddle_1024.v,1681460085,verilog,,D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sim_1/new/tb_sdf_fft_1024_top.v,,twiddle_1024,,,,,,,,
+D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/twiddle_8.v,1681398103,verilog,,D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sim_1/new/tb_sdf_fft_8_top.v,,twiddle_8,,,,,,,,

@@ -1,0 +1,38 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Fri Aug 18 09:34:42 2023
+# Process ID: 10740
+# Current directory: E:/postgraduate/contest/LongX/A7/作品提交文档/90013835源码/R4_MDC/1_SourceCode/vivado2018.3_prj
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8512 E:\postgraduate\contest\LongX\A7\作品提交文档\90013835源码\R4_MDC\1_SourceCode\vivado2018.3_prj\SDF_FFT_1024.xpr
+# Log file: E:/postgraduate/contest/LongX/A7/作品提交文档/90013835源码/R4_MDC/1_SourceCode/vivado2018.3_prj/vivado.log
+# Journal file: E:/postgraduate/contest/LongX/A7/作品提交文档/90013835源码/R4_MDC/1_SourceCode/vivado2018.3_prj\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/postgraduate/contest/LongX/A7/作品提交文档/90013835源码/R4_MDC/1_SourceCode/vivado2018.3_prj/SDF_FFT_1024.xpr
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'E:/postgraduate/contest/LongX/A7/作品提交文档/90013835源码/R4_MDC/1_SourceCode/vivado2018.3_prj'
+INFO: [Project 1-313] Project file moved from 'E:/postgraduate/contest/LongX/A7/tijiao/R4_MDC/1_SourceCode/vivado2018.3_prj' since last save.
+WARNING: [filemgmt 56-2] IP Repository Path: Could not find the directory 'E:/postgraduate/contest/LongX/A7/作品提交文档/90013835源码/IP_SDF_FFT_1024', nor could it be found using path 'E:/postgraduate/contest/LongX/A7/tijiao/IP_SDF_FFT_1024'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'e:/postgraduate/contest/LongX/A7/作品提交文档/90013835源码/IP_SDF_FFT_1024'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Vivado/Install/Vivado/2020.2/data/ip'.
+set_property board_part xilinx.com:vc709:part0:1.8 [current_project]
+WARNING: [Project 1-153] The current project device 'xcvu080-ffva2104-2-i' does not match with the device on the 'XILINX.COM:VC709:PART0:1.8' board part. A device change to match the device on 'XILINX.COM:VC709:PART0:1.8' board part is being done. Please upgrade the IP in the project via the upgrade_ip command or by selecting Reports => Reports IP Status.
+INFO: [Project 1-152] Project part set to virtex7 (xc7vx690tffg1761-2)
+reset_run synth_2
+launch_runs synth_2 -jobs 10
+[Fri Aug 18 09:35:43 2023] Launched synth_2...
+Run output will be captured here: E:/postgraduate/contest/LongX/A7/作品提交文档/90013835源码/R4_MDC/1_SourceCode/vivado2018.3_prj/SDF_FFT_1024.runs/synth_2/runme.log
+set_property part xcvu095-ffva2104-2-i [current_project]
+INFO: [Project 1-154] The current project board 'xilinx.com:vc709:part0:1.8' is reset to empty (None). Use 'Project Settings' part selector (GUI) or issue set_property Tcl Command to set the board again.
+reset_run synth_2
+launch_runs synth_2 -jobs 10
+[Fri Aug 18 09:37:24 2023] Launched synth_2...
+Run output will be captured here: E:/postgraduate/contest/LongX/A7/作品提交文档/90013835源码/R4_MDC/1_SourceCode/vivado2018.3_prj/SDF_FFT_1024.runs/synth_2/runme.log
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Aug 18 09:37:57 2023...

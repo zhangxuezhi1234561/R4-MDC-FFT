@@ -1,0 +1,283 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dE:/postgraduate/contest/LongX/A7/R4_MDC/1234567890/SDF_FFT_1.0/1_SourceCode/vivado2018.3_prj/SDF_FFT_1024.sim/sim_1/behav/modelsim
+T_opt
+!s110 1689169106
+VkRN6UG[VzSQTXnJe`WjaK1
+Z1 04 19 4 work tb_mdc_fft_1024_top fast 0
+Z2 04 4 4 work glbl fast 0
+=1-6c2408e5a074-64aeacd2-7d-6e94
+Z3 o-quiet -auto_acc_if_foreign -work xil_defaultlib -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip +acc
+n@_opt
+Z4 OL;O;10.4;61
+R0
+T_opt1
+!s110 1689237377
+VfH0dUAEd`oTa2f<1=:XVe1
+R1
+R2
+=1-6c2408e5a074-64afb781-284-1070
+R3
+n@_opt1
+R4
+R0
+vAfter_Convert
+!s10a 1688804763
+!s110 1687944222
+!i10b 1
+!s100 N0;[24RLinLO:j>:zK5MH1
+Ii1IzXSUP9j]@S8O;[zkAo0
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1687944215
+8../../../../SDF_FFT_1024.srcs/sources_1/new/After_Convert.v
+F../../../../SDF_FFT_1024.srcs/sources_1/new/After_Convert.v
+L0 3
+Z6 OL;L;10.4;61
+r1
+!s85 0
+31
+!s108 1687944222.032000
+Z7 !s107 ../../../../SDF_FFT_1024.srcs/sim_1/new/tb_mdc_fft_1024_top.v|../../../../SDF_FFT_1024.srcs/sources_1/new/Data_Convert.v|../../../../SDF_FFT_1024.srcs/sources_1/new/Before_Convert.v|../../../../SDF_FFT_1024.srcs/sources_1/new/delay_buffer.v|../../../../SDF_FFT_1024.srcs/sources_1/new/After_Convert.v|../../../../SDF_FFT_1024.srcs/sources_1/new/mdc_fft_1024_top.v|../../../../SDF_FFT_1024.srcs/sources_1/new/twiddle_rom_1024.v|../../../../SDF_FFT_1024.srcs/sources_1/new/mdc_unit.v|../../../../SDF_FFT_1024.srcs/sources_1/new/complex_mul.v|../../../../SDF_FFT_1024.srcs/sources_1/new/butterfly.v|
+Z8 !s90 -incr|-work|xil_defaultlib|../../../../SDF_FFT_1024.srcs/sources_1/new/butterfly.v|../../../../SDF_FFT_1024.srcs/sources_1/new/complex_mul.v|../../../../SDF_FFT_1024.srcs/sources_1/new/mdc_unit.v|../../../../SDF_FFT_1024.srcs/sources_1/new/twiddle_rom_1024.v|../../../../SDF_FFT_1024.srcs/sources_1/new/mdc_fft_1024_top.v|../../../../SDF_FFT_1024.srcs/sources_1/new/After_Convert.v|../../../../SDF_FFT_1024.srcs/sources_1/new/delay_buffer.v|../../../../SDF_FFT_1024.srcs/sources_1/new/Before_Convert.v|../../../../SDF_FFT_1024.srcs/sources_1/new/Data_Convert.v|../../../../SDF_FFT_1024.srcs/sim_1/new/tb_mdc_fft_1024_top.v|
+!i113 0
+Z9 o-work xil_defaultlib -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+n@after_@convert
+vBefore_Convert
+!s10a 1688804574
+!s110 1687943447
+!i10b 1
+!s100 CFI^:i@_Ija<gG;S^aaJ;0
+I83EV15VW2Z_e1lFgQaTHZ1
+R5
+R0
+w1687943440
+8../../../../SDF_FFT_1024.srcs/sources_1/new/Before_Convert.v
+F../../../../SDF_FFT_1024.srcs/sources_1/new/Before_Convert.v
+L0 3
+R6
+r1
+!s85 0
+31
+!s108 1687943447.812000
+R7
+R8
+!i113 0
+R9
+n@before_@convert
+vbutterfly
+!s10a 1688804770
+Z10 !s110 1689169095
+!i10b 1
+!s100 ;YJ2H5`<QaigNfEaNze5Q0
+I44^9Q4Bk0=Dc<J9nUUDe83
+R5
+R0
+w1688804770
+8../../../../SDF_FFT_1024.srcs/sources_1/new/butterfly.v
+F../../../../SDF_FFT_1024.srcs/sources_1/new/butterfly.v
+Z11 L0 23
+R6
+r1
+!s85 0
+31
+Z12 !s108 1689169095.126000
+R7
+R8
+!i113 0
+R9
+vcomplex_mul
+!s10a 1681546661
+Z13 !s110 1687938193
+!i10b 1
+!s100 h5WUXNa6VM7HGZo@1K60]1
+Icz7GhN@dUGLkK42L0IM942
+R5
+R0
+w1681546661
+8../../../../SDF_FFT_1024.srcs/sources_1/new/complex_mul.v
+F../../../../SDF_FFT_1024.srcs/sources_1/new/complex_mul.v
+R11
+R6
+r1
+!s85 0
+31
+Z14 !s108 1687938193.558000
+Z15 !s107 ../../../../SDF_FFT_1024.srcs/sim_1/new/tb_sdf_fft_1024_top.v|../../../../SDF_FFT_1024.srcs/sources_1/new/Data_Convert.v|../../../../SDF_FFT_1024.srcs/sources_1/new/Before_Convert.v|../../../../SDF_FFT_1024.srcs/sources_1/new/delay_buffer.v|../../../../SDF_FFT_1024.srcs/sources_1/new/After_Convert.v|../../../../SDF_FFT_1024.srcs/sources_1/new/mdc_fft_1024_top.v|../../../../SDF_FFT_1024.srcs/sources_1/new/twiddle_rom_1024.v|../../../../SDF_FFT_1024.srcs/sources_1/new/mdc_unit.v|../../../../SDF_FFT_1024.srcs/sources_1/new/complex_mul.v|../../../../SDF_FFT_1024.srcs/sources_1/new/butterfly.v|
+Z16 !s90 -incr|-work|xil_defaultlib|../../../../SDF_FFT_1024.srcs/sources_1/new/butterfly.v|../../../../SDF_FFT_1024.srcs/sources_1/new/complex_mul.v|../../../../SDF_FFT_1024.srcs/sources_1/new/mdc_unit.v|../../../../SDF_FFT_1024.srcs/sources_1/new/twiddle_rom_1024.v|../../../../SDF_FFT_1024.srcs/sources_1/new/mdc_fft_1024_top.v|../../../../SDF_FFT_1024.srcs/sources_1/new/After_Convert.v|../../../../SDF_FFT_1024.srcs/sources_1/new/delay_buffer.v|../../../../SDF_FFT_1024.srcs/sources_1/new/Before_Convert.v|../../../../SDF_FFT_1024.srcs/sources_1/new/Data_Convert.v|../../../../SDF_FFT_1024.srcs/sim_1/new/tb_sdf_fft_1024_top.v|
+!i113 0
+R9
+vData_Convert
+!s10a 1688008249
+!s110 1688008334
+!i10b 1
+!s100 lLV;CCCF?kT6_>o@a@>9h2
+IHOokifdz<?f^GL@IXSk0E1
+R5
+R0
+w1688008249
+8../../../../SDF_FFT_1024.srcs/sources_1/new/Data_Convert.v
+F../../../../SDF_FFT_1024.srcs/sources_1/new/Data_Convert.v
+L0 5
+R6
+r1
+!s85 0
+31
+!s108 1688008334.208000
+R7
+R8
+!i113 0
+R9
+n@data_@convert
+vdelay_buffer
+!s10a 1681707445
+R13
+!i10b 1
+!s100 VzOdNSDkmm0[ckJfDXgzo2
+I>:VFHb=mNJz>Hnc`ohBLl1
+R5
+R0
+w1681707445
+8../../../../SDF_FFT_1024.srcs/sources_1/new/delay_buffer.v
+F../../../../SDF_FFT_1024.srcs/sources_1/new/delay_buffer.v
+Z17 L0 22
+R6
+r1
+!s85 0
+31
+R14
+R15
+R16
+!i113 0
+R9
+vglbl
+!s110 1689239767
+!i10b 1
+!s100 JWZ^meD<P7inSF0<1SiO32
+I`Mbk0oHiBm0dNc:a>md]<3
+R5
+dE:/postgraduate/contest/LongX/A7/tijiao/R4_MDC/1_SourceCode/vivado2018.3_prj/SDF_FFT_1024.sim/sim_1/behav/modelsim
+w1544155481
+8glbl.v
+Fglbl.v
+L0 6
+R6
+r1
+!s85 0
+31
+!s108 1689239767.423000
+!s107 glbl.v|
+!s90 -work|xil_defaultlib|glbl.v|
+!i113 0
+R9
+vmdc_fft_1024_top
+!s10a 1689165831
+R10
+!i10b 1
+!s100 K=5:42[W`1E:QXl]mI>OU0
+Ij6D4o0[`>EmJ3gcFYT0D23
+R5
+R0
+w1689165831
+8../../../../SDF_FFT_1024.srcs/sources_1/new/mdc_fft_1024_top.v
+F../../../../SDF_FFT_1024.srcs/sources_1/new/mdc_fft_1024_top.v
+R11
+R6
+r1
+!s85 0
+31
+R12
+R7
+R8
+!i113 0
+R9
+vmdc_unit
+!s10a 1688804749
+!s110 1688523279
+!i10b 1
+!s100 D3@cDX_eGgH`FI=?B<LcL2
+I4Z]_1?@QJbIMJKg@YA4:o3
+R5
+R0
+w1688523231
+8../../../../SDF_FFT_1024.srcs/sources_1/new/mdc_unit.v
+F../../../../SDF_FFT_1024.srcs/sources_1/new/mdc_unit.v
+R11
+R6
+r1
+!s85 0
+31
+!s108 1688523279.983000
+R7
+R8
+!i113 0
+R9
+vtb_mdc_fft_1024_top
+!s10a 1688522481
+!s110 1688522489
+!i10b 1
+!s100 :14bzQzY?MezBWES@:CXX0
+IjBcCIaMGDVHRdgib6Th2K0
+R5
+R0
+w1688522481
+8../../../../SDF_FFT_1024.srcs/sim_1/new/tb_mdc_fft_1024_top.v
+F../../../../SDF_FFT_1024.srcs/sim_1/new/tb_mdc_fft_1024_top.v
+R11
+R6
+r1
+!s85 0
+31
+!s108 1688522489.271000
+R7
+R8
+!i113 0
+R9
+vtb_sdf_fft_1024_top
+R13
+!i10b 1
+!s100 1Zf]_E>bX@BdT?9>Wg>Pc0
+I8VjVeRH>ZAeTeebzKNL0Z2
+R5
+R0
+w1687925254
+8../../../../SDF_FFT_1024.srcs/sim_1/new/tb_sdf_fft_1024_top.v
+F../../../../SDF_FFT_1024.srcs/sim_1/new/tb_sdf_fft_1024_top.v
+R11
+R6
+r1
+!s85 0
+31
+R14
+R15
+R16
+!i113 0
+R9
+vtwiddle_rom_1024
+!s10a 1688804759
+R10
+!i10b 1
+!s100 _YzlAICFjL:zgAg^kco=60
+IU8m88g5QdXmdQjMWDPn`M3
+R5
+R0
+w1688804759
+8../../../../SDF_FFT_1024.srcs/sources_1/new/twiddle_rom_1024.v
+F../../../../SDF_FFT_1024.srcs/sources_1/new/twiddle_rom_1024.v
+R17
+R6
+r1
+!s85 0
+31
+R12
+R7
+R8
+!i113 0
+R9

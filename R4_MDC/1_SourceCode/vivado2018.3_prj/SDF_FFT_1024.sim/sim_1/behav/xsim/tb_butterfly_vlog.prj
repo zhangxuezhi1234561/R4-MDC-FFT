@@ -1,0 +1,11 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../SDF_FFT_1024.srcs/sources_1/new/butterfly.v" \
+"../../../../SDF_FFT_1024.srcs/sources_1/new/delay_buffer.v" \
+"../../../../SDF_FFT_1024.srcs/sim_1/new/tb_butterfly.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

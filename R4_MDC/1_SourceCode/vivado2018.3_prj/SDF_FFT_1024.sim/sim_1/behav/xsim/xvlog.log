@@ -1,0 +1,14 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/butterfly.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module butterfly
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/complex_mul.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module complex_mul
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/delay_buffer.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module delay_buffer
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_fft_1024_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sdf_fft_1024_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sdf_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/twiddle_1024.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module twiddle_1024
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sim_1/new/tb_sdf_fft_1024_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_sdf_fft_1024_top

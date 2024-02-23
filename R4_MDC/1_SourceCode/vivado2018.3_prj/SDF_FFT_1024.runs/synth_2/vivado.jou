@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Fri Aug 18 09:37:26 2023
+# Process ID: 11240
+# Current directory: E:/postgraduate/contest/LongX/A7/作品提交文档/90013835源码/R4_MDC/1_SourceCode/vivado2018.3_prj/SDF_FFT_1024.runs/synth_2
+# Command line: vivado.exe -log mdc_fft_1024_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source mdc_fft_1024_top.tcl
+# Log file: E:/postgraduate/contest/LongX/A7/作品提交文档/90013835源码/R4_MDC/1_SourceCode/vivado2018.3_prj/SDF_FFT_1024.runs/synth_2/mdc_fft_1024_top.vds
+# Journal file: E:/postgraduate/contest/LongX/A7/作品提交文档/90013835源码/R4_MDC/1_SourceCode/vivado2018.3_prj/SDF_FFT_1024.runs/synth_2\vivado.jou
+#-----------------------------------------------------------
+source mdc_fft_1024_top.tcl -notrace

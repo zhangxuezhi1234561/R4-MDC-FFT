@@ -1,0 +1,88 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Tue Apr 18 14:11:27 2023
+| Host         : Eddy running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file sdf_fft_1024_top_control_sets_placed.rpt
+| Design       : sdf_fft_1024_top
+| Device       : xc7a200t
+---------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    17 |
+| Unused register locations in slices containing registers |    69 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      2 |            1 |
+|      6 |            1 |
+|      7 |            1 |
+|      8 |            1 |
+|      9 |            1 |
+|     10 |            2 |
+|     11 |            1 |
+|    16+ |            9 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |            1220 |          427 |
+| No           | No                    | Yes                    |             704 |          192 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |              63 |           22 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------+----------------------------------+------------------------------------------+------------------+----------------+
+|  Clock Signal  |           Enable Signal          |             Set/Reset Signal             | Slice Load Count | Bel Load Count |
++----------------+----------------------------------+------------------------------------------+------------------+----------------+
+|  clk_IBUF_BUFG | data_i_en_IBUF                   | s1_sdf_unit/inst_butterfly/rstn          |                2 |              2 |
+|  clk_IBUF_BUFG | s6_sdf_unit/mul_o_en             | s4_sdf_unit/inst_butterfly/rstn          |                2 |              6 |
+|  clk_IBUF_BUFG | s5_sdf_unit/mul_o_en_temp2_reg_0 | s4_sdf_unit/inst_butterfly/rstn          |                3 |              7 |
+|  clk_IBUF_BUFG | s4_sdf_unit/mul_o_en             | s4_sdf_unit/inst_butterfly/rstn          |                3 |              8 |
+|  clk_IBUF_BUFG | s3_sdf_unit/mul_o_en_temp2_reg_0 | s4_sdf_unit/inst_butterfly/rstn          |                3 |              9 |
+|  clk_IBUF_BUFG | s2_sdf_unit/mul_o_en             | s2_sdf_unit/inst_butterfly/rstn          |                4 |             10 |
+|  clk_IBUF_BUFG | data_i_en_IBUF                   | s2_sdf_unit/inst_butterfly/rstn          |                3 |             10 |
+|  clk_IBUF_BUFG | s1_sdf_unit/E[0]                 | s2_sdf_unit/inst_butterfly/rstn          |                2 |             11 |
+|  clk_IBUF_BUFG |                                  | s5_sdf_unit/bf_data_o_reg[63]_i_1__0_n_0 |               16 |             64 |
+|  clk_IBUF_BUFG |                                  | s6_sdf_unit/bf_data_o_reg[63]_i_1_n_0    |               16 |             64 |
+|  clk_IBUF_BUFG |                                  | s10_sdf_unit/rstn                        |               18 |             66 |
+|  clk_IBUF_BUFG |                                  | s2_sdf_unit/inst_butterfly/rstn          |               25 |             90 |
+|  clk_IBUF_BUFG |                                  | s4_sdf_unit/inst_butterfly/rstn          |               27 |             91 |
+|  clk_IBUF_BUFG |                                  | s8_sdf_unit/inst_butterfly/rstn          |               30 |            105 |
+|  clk_IBUF_BUFG |                                  | s9_sdf_unit/inst_butterfly/rstn          |               29 |            105 |
+|  clk_IBUF_BUFG |                                  | s1_sdf_unit/inst_butterfly/rstn          |               31 |            119 |
+|  clk_IBUF_BUFG |                                  |                                          |              695 |           3430 |
++----------------+----------------------------------+------------------------------------------+------------------+----------------+
+
+

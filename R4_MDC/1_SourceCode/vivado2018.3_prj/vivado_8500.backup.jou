@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Thu Jul 13 17:10:31 2023
+# Process ID: 8500
+# Current directory: E:/postgraduate/contest/LongX/A7/tijiao/R4_MDC/1_SourceCode/vivado2018.3_prj
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8924 E:\postgraduate\contest\LongX\A7\tijiao\R4_MDC\1_SourceCode\vivado2018.3_prj\SDF_FFT_1024.xpr
+# Log file: E:/postgraduate/contest/LongX/A7/tijiao/R4_MDC/1_SourceCode/vivado2018.3_prj/vivado.log
+# Journal file: E:/postgraduate/contest/LongX/A7/tijiao/R4_MDC/1_SourceCode/vivado2018.3_prj\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/postgraduate/contest/LongX/A7/tijiao/R4_MDC/1_SourceCode/vivado2018.3_prj/SDF_FFT_1024.xpr

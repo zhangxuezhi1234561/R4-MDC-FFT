@@ -1,0 +1,1921 @@
+
+*** Running vivado
+    with args -log sdf_fft_1024_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source sdf_fft_1024_top.tcl
+
+
+****** Vivado v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source sdf_fft_1024_top.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/study_file/SEU/GoodwayHouse/SDF_FFT/output/IP_SDF_FFT_1024'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/app/Vivado2018.3/Vivado/2018.3/data/ip'.
+Command: synth_design -top sdf_fft_1024_top -part xc7a200tfbg484-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a200t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a200t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 34340 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 407.207 ; gain = 102.555
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'sdf_fft_1024_top' [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_fft_1024_top.v:23]
+	Parameter DATA_NUM bound to: 1024 - type: integer 
+	Parameter DATA_WIDTH bound to: 64 - type: integer 
+	Parameter TWIDDLE_WIDTH bound to: 64 - type: integer 
+	Parameter TWIDDLE_SCALE_SHIFT bound to: 16 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'sdf_unit' [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:23]
+	Parameter DATA_NUM bound to: 1024 - type: integer 
+	Parameter STAGE_ID bound to: 1 - type: integer 
+	Parameter DATA_WIDTH bound to: 64 - type: integer 
+	Parameter TWIDDLE_WIDTH bound to: 64 - type: integer 
+	Parameter TWIDDLE_SCALE_SHIFT bound to: 16 - type: integer 
+	Parameter STAGE_ALL bound to: 10 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'butterfly' [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/butterfly.v:23]
+	Parameter DATA_NUM bound to: 1024 - type: integer 
+	Parameter STAGE_ID bound to: 1 - type: integer 
+	Parameter DATA_WIDTH bound to: 64 - type: integer 
+	Parameter STAGE_ALL bound to: 10 - type: integer 
+	Parameter DELAY_N bound to: 512 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'delay_buffer' [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/delay_buffer.v:22]
+	Parameter DEPTH bound to: 512 - type: integer 
+	Parameter DATA_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'delay_buffer' (1#1) [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/delay_buffer.v:22]
+INFO: [Synth 8-6157] synthesizing module 'delay_buffer__parameterized0' [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/delay_buffer.v:22]
+	Parameter DEPTH bound to: 512 - type: integer 
+	Parameter DATA_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'delay_buffer__parameterized0' (1#1) [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/delay_buffer.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'butterfly' (2#1) [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/butterfly.v:23]
+INFO: [Synth 8-6157] synthesizing module 'twiddle_rom_1024' [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/twiddle_rom_1024.v:11]
+	Parameter TWIDDLE_WIDTH bound to: 64 - type: integer 
+	Parameter ADDR_WIDTH bound to: 8 - type: integer 
+	Parameter TW_REAL_ARY_PATH bound to: D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.sim/sim_1/behav/modelsim/tw_real_ary.txt - type: string 
+	Parameter TW_IMAG_ARY_PATH bound to: D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.sim/sim_1/behav/modelsim/tw_imag_ary.txt - type: string 
+INFO: [Synth 8-3876] $readmem data file 'D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.sim/sim_1/behav/modelsim/tw_real_ary.txt' is read successfully [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/twiddle_rom_1024.v:29]
+INFO: [Synth 8-3876] $readmem data file 'D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.sim/sim_1/behav/modelsim/tw_imag_ary.txt' is read successfully [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/twiddle_rom_1024.v:30]
+INFO: [Synth 8-6155] done synthesizing module 'twiddle_rom_1024' (3#1) [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/twiddle_rom_1024.v:11]
+INFO: [Synth 8-6157] synthesizing module 'complex_mul' [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/complex_mul.v:23]
+	Parameter DATA_WIDTH bound to: 64 - type: integer 
+	Parameter TWIDDLE_WIDTH bound to: 64 - type: integer 
+	Parameter TWIDDLE_SCALE_SHIFT bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'complex_mul' (4#1) [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/complex_mul.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'sdf_unit' (5#1) [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:23]
+INFO: [Synth 8-6157] synthesizing module 'sdf_unit__parameterized0' [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:23]
+	Parameter DATA_NUM bound to: 1024 - type: integer 
+	Parameter STAGE_ID bound to: 2 - type: integer 
+	Parameter DATA_WIDTH bound to: 64 - type: integer 
+	Parameter TWIDDLE_WIDTH bound to: 64 - type: integer 
+	Parameter TWIDDLE_SCALE_SHIFT bound to: 16 - type: integer 
+	Parameter STAGE_ALL bound to: 10 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'butterfly__parameterized0' [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/butterfly.v:23]
+	Parameter DATA_NUM bound to: 1024 - type: integer 
+	Parameter STAGE_ID bound to: 2 - type: integer 
+	Parameter DATA_WIDTH bound to: 64 - type: integer 
+	Parameter STAGE_ALL bound to: 10 - type: integer 
+	Parameter DELAY_N bound to: 256 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'delay_buffer__parameterized1' [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/delay_buffer.v:22]
+	Parameter DEPTH bound to: 256 - type: integer 
+	Parameter DATA_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'delay_buffer__parameterized1' (5#1) [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/delay_buffer.v:22]
+INFO: [Synth 8-6157] synthesizing module 'delay_buffer__parameterized2' [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/delay_buffer.v:22]
+	Parameter DEPTH bound to: 256 - type: integer 
+	Parameter DATA_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'delay_buffer__parameterized2' (5#1) [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/delay_buffer.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'butterfly__parameterized0' (5#1) [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/butterfly.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'sdf_unit__parameterized0' (5#1) [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:23]
+INFO: [Synth 8-6157] synthesizing module 'sdf_unit__parameterized1' [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:23]
+	Parameter DATA_NUM bound to: 1024 - type: integer 
+	Parameter STAGE_ID bound to: 3 - type: integer 
+	Parameter DATA_WIDTH bound to: 64 - type: integer 
+	Parameter TWIDDLE_WIDTH bound to: 64 - type: integer 
+	Parameter TWIDDLE_SCALE_SHIFT bound to: 16 - type: integer 
+	Parameter STAGE_ALL bound to: 10 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'butterfly__parameterized1' [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/butterfly.v:23]
+	Parameter DATA_NUM bound to: 1024 - type: integer 
+	Parameter STAGE_ID bound to: 3 - type: integer 
+	Parameter DATA_WIDTH bound to: 64 - type: integer 
+	Parameter STAGE_ALL bound to: 10 - type: integer 
+	Parameter DELAY_N bound to: 128 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'delay_buffer__parameterized3' [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/delay_buffer.v:22]
+	Parameter DEPTH bound to: 128 - type: integer 
+	Parameter DATA_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'delay_buffer__parameterized3' (5#1) [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/delay_buffer.v:22]
+INFO: [Synth 8-6157] synthesizing module 'delay_buffer__parameterized4' [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/delay_buffer.v:22]
+	Parameter DEPTH bound to: 128 - type: integer 
+	Parameter DATA_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'delay_buffer__parameterized4' (5#1) [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/delay_buffer.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'butterfly__parameterized1' (5#1) [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/butterfly.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'sdf_unit__parameterized1' (5#1) [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:23]
+INFO: [Synth 8-6157] synthesizing module 'sdf_unit__parameterized2' [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:23]
+	Parameter DATA_NUM bound to: 1024 - type: integer 
+	Parameter STAGE_ID bound to: 4 - type: integer 
+	Parameter DATA_WIDTH bound to: 64 - type: integer 
+	Parameter TWIDDLE_WIDTH bound to: 64 - type: integer 
+	Parameter TWIDDLE_SCALE_SHIFT bound to: 16 - type: integer 
+	Parameter STAGE_ALL bound to: 10 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'butterfly__parameterized2' [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/butterfly.v:23]
+	Parameter DATA_NUM bound to: 1024 - type: integer 
+	Parameter STAGE_ID bound to: 4 - type: integer 
+	Parameter DATA_WIDTH bound to: 64 - type: integer 
+	Parameter STAGE_ALL bound to: 10 - type: integer 
+	Parameter DELAY_N bound to: 64 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'delay_buffer__parameterized5' [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/delay_buffer.v:22]
+	Parameter DEPTH bound to: 64 - type: integer 
+	Parameter DATA_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'delay_buffer__parameterized5' (5#1) [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/delay_buffer.v:22]
+INFO: [Synth 8-6157] synthesizing module 'delay_buffer__parameterized6' [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/delay_buffer.v:22]
+	Parameter DEPTH bound to: 64 - type: integer 
+	Parameter DATA_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'delay_buffer__parameterized6' (5#1) [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/delay_buffer.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'butterfly__parameterized2' (5#1) [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/butterfly.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'sdf_unit__parameterized2' (5#1) [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:23]
+INFO: [Synth 8-6157] synthesizing module 'sdf_unit__parameterized3' [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:23]
+	Parameter DATA_NUM bound to: 1024 - type: integer 
+	Parameter STAGE_ID bound to: 5 - type: integer 
+	Parameter DATA_WIDTH bound to: 64 - type: integer 
+	Parameter TWIDDLE_WIDTH bound to: 64 - type: integer 
+	Parameter TWIDDLE_SCALE_SHIFT bound to: 16 - type: integer 
+	Parameter STAGE_ALL bound to: 10 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'butterfly__parameterized3' [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/butterfly.v:23]
+	Parameter DATA_NUM bound to: 1024 - type: integer 
+	Parameter STAGE_ID bound to: 5 - type: integer 
+	Parameter DATA_WIDTH bound to: 64 - type: integer 
+	Parameter STAGE_ALL bound to: 10 - type: integer 
+	Parameter DELAY_N bound to: 32 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'delay_buffer__parameterized7' [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/delay_buffer.v:22]
+	Parameter DEPTH bound to: 32 - type: integer 
+	Parameter DATA_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'delay_buffer__parameterized7' (5#1) [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/delay_buffer.v:22]
+INFO: [Synth 8-6157] synthesizing module 'delay_buffer__parameterized8' [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/delay_buffer.v:22]
+	Parameter DEPTH bound to: 32 - type: integer 
+	Parameter DATA_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'delay_buffer__parameterized8' (5#1) [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/delay_buffer.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'butterfly__parameterized3' (5#1) [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/butterfly.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'sdf_unit__parameterized3' (5#1) [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:23]
+INFO: [Synth 8-6157] synthesizing module 'sdf_unit__parameterized4' [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:23]
+	Parameter DATA_NUM bound to: 1024 - type: integer 
+	Parameter STAGE_ID bound to: 6 - type: integer 
+	Parameter DATA_WIDTH bound to: 64 - type: integer 
+	Parameter TWIDDLE_WIDTH bound to: 64 - type: integer 
+	Parameter TWIDDLE_SCALE_SHIFT bound to: 16 - type: integer 
+	Parameter STAGE_ALL bound to: 10 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'butterfly__parameterized4' [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/butterfly.v:23]
+	Parameter DATA_NUM bound to: 1024 - type: integer 
+	Parameter STAGE_ID bound to: 6 - type: integer 
+	Parameter DATA_WIDTH bound to: 64 - type: integer 
+	Parameter STAGE_ALL bound to: 10 - type: integer 
+	Parameter DELAY_N bound to: 16 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'delay_buffer__parameterized9' [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/delay_buffer.v:22]
+	Parameter DEPTH bound to: 16 - type: integer 
+	Parameter DATA_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'delay_buffer__parameterized9' (5#1) [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/delay_buffer.v:22]
+INFO: [Synth 8-6157] synthesizing module 'delay_buffer__parameterized10' [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/delay_buffer.v:22]
+	Parameter DEPTH bound to: 16 - type: integer 
+	Parameter DATA_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'delay_buffer__parameterized10' (5#1) [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/delay_buffer.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'butterfly__parameterized4' (5#1) [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/butterfly.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'sdf_unit__parameterized4' (5#1) [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:23]
+INFO: [Synth 8-6157] synthesizing module 'sdf_unit__parameterized5' [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:23]
+	Parameter DATA_NUM bound to: 1024 - type: integer 
+	Parameter STAGE_ID bound to: 7 - type: integer 
+	Parameter DATA_WIDTH bound to: 64 - type: integer 
+	Parameter TWIDDLE_WIDTH bound to: 64 - type: integer 
+	Parameter TWIDDLE_SCALE_SHIFT bound to: 16 - type: integer 
+	Parameter STAGE_ALL bound to: 10 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'butterfly__parameterized5' [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/butterfly.v:23]
+	Parameter DATA_NUM bound to: 1024 - type: integer 
+	Parameter STAGE_ID bound to: 7 - type: integer 
+	Parameter DATA_WIDTH bound to: 64 - type: integer 
+	Parameter STAGE_ALL bound to: 10 - type: integer 
+	Parameter DELAY_N bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'delay_buffer__parameterized11' [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/delay_buffer.v:22]
+	Parameter DEPTH bound to: 8 - type: integer 
+	Parameter DATA_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'delay_buffer__parameterized11' (5#1) [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/delay_buffer.v:22]
+INFO: [Synth 8-6157] synthesizing module 'delay_buffer__parameterized12' [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/delay_buffer.v:22]
+	Parameter DEPTH bound to: 8 - type: integer 
+	Parameter DATA_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'delay_buffer__parameterized12' (5#1) [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/delay_buffer.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'butterfly__parameterized5' (5#1) [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/butterfly.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'sdf_unit__parameterized5' (5#1) [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:23]
+INFO: [Synth 8-6157] synthesizing module 'sdf_unit__parameterized6' [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:23]
+	Parameter DATA_NUM bound to: 1024 - type: integer 
+	Parameter STAGE_ID bound to: 8 - type: integer 
+	Parameter DATA_WIDTH bound to: 64 - type: integer 
+	Parameter TWIDDLE_WIDTH bound to: 64 - type: integer 
+	Parameter TWIDDLE_SCALE_SHIFT bound to: 16 - type: integer 
+	Parameter STAGE_ALL bound to: 10 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'butterfly__parameterized6' [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/butterfly.v:23]
+	Parameter DATA_NUM bound to: 1024 - type: integer 
+	Parameter STAGE_ID bound to: 8 - type: integer 
+	Parameter DATA_WIDTH bound to: 64 - type: integer 
+	Parameter STAGE_ALL bound to: 10 - type: integer 
+	Parameter DELAY_N bound to: 4 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'delay_buffer__parameterized13' [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/delay_buffer.v:22]
+	Parameter DEPTH bound to: 4 - type: integer 
+	Parameter DATA_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'delay_buffer__parameterized13' (5#1) [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/delay_buffer.v:22]
+INFO: [Synth 8-6157] synthesizing module 'delay_buffer__parameterized14' [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/delay_buffer.v:22]
+	Parameter DEPTH bound to: 4 - type: integer 
+	Parameter DATA_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'delay_buffer__parameterized14' (5#1) [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/delay_buffer.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'butterfly__parameterized6' (5#1) [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/butterfly.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'sdf_unit__parameterized6' (5#1) [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:23]
+INFO: [Synth 8-6157] synthesizing module 'sdf_unit__parameterized7' [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:23]
+	Parameter DATA_NUM bound to: 1024 - type: integer 
+	Parameter STAGE_ID bound to: 9 - type: integer 
+	Parameter DATA_WIDTH bound to: 64 - type: integer 
+	Parameter TWIDDLE_WIDTH bound to: 64 - type: integer 
+	Parameter TWIDDLE_SCALE_SHIFT bound to: 16 - type: integer 
+	Parameter STAGE_ALL bound to: 10 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'butterfly__parameterized7' [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/butterfly.v:23]
+	Parameter DATA_NUM bound to: 1024 - type: integer 
+	Parameter STAGE_ID bound to: 9 - type: integer 
+	Parameter DATA_WIDTH bound to: 64 - type: integer 
+	Parameter STAGE_ALL bound to: 10 - type: integer 
+	Parameter DELAY_N bound to: 2 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'delay_buffer__parameterized15' [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/delay_buffer.v:22]
+	Parameter DEPTH bound to: 2 - type: integer 
+	Parameter DATA_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'delay_buffer__parameterized15' (5#1) [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/delay_buffer.v:22]
+INFO: [Synth 8-6157] synthesizing module 'delay_buffer__parameterized16' [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/delay_buffer.v:22]
+	Parameter DEPTH bound to: 2 - type: integer 
+	Parameter DATA_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'delay_buffer__parameterized16' (5#1) [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/delay_buffer.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'butterfly__parameterized7' (5#1) [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/butterfly.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'sdf_unit__parameterized7' (5#1) [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:23]
+INFO: [Synth 8-6157] synthesizing module 'sdf_unit__parameterized8' [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:23]
+	Parameter DATA_NUM bound to: 1024 - type: integer 
+	Parameter STAGE_ID bound to: 10 - type: integer 
+	Parameter DATA_WIDTH bound to: 64 - type: integer 
+	Parameter TWIDDLE_WIDTH bound to: 64 - type: integer 
+	Parameter TWIDDLE_SCALE_SHIFT bound to: 16 - type: integer 
+	Parameter STAGE_ALL bound to: 10 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'butterfly__parameterized8' [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/butterfly.v:23]
+	Parameter DATA_NUM bound to: 1024 - type: integer 
+	Parameter STAGE_ID bound to: 10 - type: integer 
+	Parameter DATA_WIDTH bound to: 64 - type: integer 
+	Parameter STAGE_ALL bound to: 10 - type: integer 
+	Parameter DELAY_N bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'delay_buffer__parameterized17' [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/delay_buffer.v:22]
+	Parameter DEPTH bound to: 1 - type: integer 
+	Parameter DATA_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'delay_buffer__parameterized17' (5#1) [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/delay_buffer.v:22]
+INFO: [Synth 8-6157] synthesizing module 'delay_buffer__parameterized18' [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/delay_buffer.v:22]
+	Parameter DEPTH bound to: 1 - type: integer 
+	Parameter DATA_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'delay_buffer__parameterized18' (5#1) [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/delay_buffer.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'butterfly__parameterized8' (5#1) [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/butterfly.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'sdf_unit__parameterized8' (5#1) [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'sdf_fft_1024_top' (6#1) [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_fft_1024_top.v:23]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 503.738 ; gain = 199.086
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 503.738 ; gain = 199.086
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a200tfbg484-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 503.738 ; gain = 199.086
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a200tfbg484-2
+INFO: [Synth 8-5546] ROM "tw_imag_ary" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 719.305 ; gain = 414.652
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+------------------------------+------------+----------+
+|      |RTL Partition                 |Replication |Instances |
++------+------------------------------+------------+----------+
+|1     |twiddle_rom_1024              |          10|     16385|
+|2     |sdf_unit__GC0                 |           1|     34292|
+|3     |sdf_unit__parameterized0__GC0 |           1|     17646|
+|4     |sdf_unit__parameterized1__GC0 |           1|      9320|
+|5     |sdf_unit__parameterized2__GC0 |           1|      5154|
+|6     |sdf_unit__parameterized3__GC0 |           1|      3068|
+|7     |sdf_unit__parameterized4__GC0 |           1|      2022|
+|8     |sdf_unit__parameterized5__GC0 |           1|      1496|
+|9     |sdf_unit__parameterized6__GC0 |           1|      1230|
+|10    |sdf_unit__parameterized7__GC0 |           1|      1095|
+|11    |sdf_unit__parameterized8__GC0 |           1|      1024|
++------+------------------------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     64 Bit       Adders := 10    
+	   2 Input     32 Bit       Adders := 10    
+	   3 Input     32 Bit       Adders := 10    
+	   2 Input     10 Bit       Adders := 1     
+	   2 Input      9 Bit       Adders := 10    
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
+	   2 Input      1 Bit       Adders := 1     
++---Registers : 
+	               64 Bit    Registers := 1033  
+	               32 Bit    Registers := 20    
+	               10 Bit    Registers := 1     
+	                9 Bit    Registers := 11    
+	                8 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1034  
++---Multipliers : 
+	                32x32  Multipliers := 40    
++---ROMs : 
+	                              ROMs := 10    
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 10    
+	 513 Input     32 Bit        Muxes := 10    
+	   2 Input      9 Bit        Muxes := 10    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module twiddle_rom_1024 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 2     
++---ROMs : 
+	                              ROMs := 1     
++---Muxes : 
+	 513 Input     32 Bit        Muxes := 1     
+Module delay_buffer 
+Detailed RTL Component Info : 
++---Registers : 
+	               64 Bit    Registers := 512   
+Module delay_buffer__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 512   
+Module butterfly 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     64 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 1     
++---Registers : 
+	               10 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 1     
+Module complex_mul__1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   3 Input     32 Bit       Adders := 1     
++---Multipliers : 
+	                32x32  Multipliers := 4     
+Module sdf_unit 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
++---Registers : 
+	               64 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      9 Bit        Muxes := 1     
+Module delay_buffer__parameterized1 
+Detailed RTL Component Info : 
++---Registers : 
+	               64 Bit    Registers := 256   
+Module delay_buffer__parameterized2 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 256   
+Module butterfly__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     64 Bit       Adders := 1     
+	   2 Input      9 Bit       Adders := 1     
++---Registers : 
+	                9 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 1     
+Module complex_mul__2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   3 Input     32 Bit       Adders := 1     
++---Multipliers : 
+	                32x32  Multipliers := 4     
+Module sdf_unit__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
++---Registers : 
+	               64 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      9 Bit        Muxes := 1     
+Module delay_buffer__parameterized3 
+Detailed RTL Component Info : 
++---Registers : 
+	               64 Bit    Registers := 128   
+Module delay_buffer__parameterized4 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 128   
+Module butterfly__parameterized1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     64 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 1     
+Module complex_mul__3 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   3 Input     32 Bit       Adders := 1     
++---Multipliers : 
+	                32x32  Multipliers := 4     
+Module sdf_unit__parameterized1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
++---Registers : 
+	               64 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      9 Bit        Muxes := 1     
+Module delay_buffer__parameterized5 
+Detailed RTL Component Info : 
++---Registers : 
+	               64 Bit    Registers := 64    
+Module delay_buffer__parameterized6 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 64    
+Module butterfly__parameterized2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     64 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 1     
++---Registers : 
+	                7 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 1     
+Module complex_mul__4 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   3 Input     32 Bit       Adders := 1     
++---Multipliers : 
+	                32x32  Multipliers := 4     
+Module sdf_unit__parameterized2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
++---Registers : 
+	               64 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      9 Bit        Muxes := 1     
+Module delay_buffer__parameterized7 
+Detailed RTL Component Info : 
++---Registers : 
+	               64 Bit    Registers := 32    
+Module delay_buffer__parameterized8 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 32    
+Module butterfly__parameterized3 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     64 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	                6 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 1     
+Module complex_mul__5 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   3 Input     32 Bit       Adders := 1     
++---Multipliers : 
+	                32x32  Multipliers := 4     
+Module sdf_unit__parameterized3 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
++---Registers : 
+	               64 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      9 Bit        Muxes := 1     
+Module delay_buffer__parameterized9 
+Detailed RTL Component Info : 
++---Registers : 
+	               64 Bit    Registers := 16    
+Module delay_buffer__parameterized10 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 16    
+Module butterfly__parameterized4 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     64 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 1     
++---Registers : 
+	                5 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 1     
+Module complex_mul__6 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   3 Input     32 Bit       Adders := 1     
++---Multipliers : 
+	                32x32  Multipliers := 4     
+Module sdf_unit__parameterized4 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
++---Registers : 
+	               64 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      9 Bit        Muxes := 1     
+Module delay_buffer__parameterized11 
+Detailed RTL Component Info : 
++---Registers : 
+	               64 Bit    Registers := 8     
+Module delay_buffer__parameterized12 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 8     
+Module butterfly__parameterized5 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     64 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 1     
+Module complex_mul__7 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   3 Input     32 Bit       Adders := 1     
++---Multipliers : 
+	                32x32  Multipliers := 4     
+Module sdf_unit__parameterized5 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
++---Registers : 
+	               64 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      9 Bit        Muxes := 1     
+Module delay_buffer__parameterized13 
+Detailed RTL Component Info : 
++---Registers : 
+	               64 Bit    Registers := 4     
+Module delay_buffer__parameterized14 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 4     
+Module butterfly__parameterized6 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     64 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 1     
+Module complex_mul__8 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   3 Input     32 Bit       Adders := 1     
++---Multipliers : 
+	                32x32  Multipliers := 4     
+Module sdf_unit__parameterized6 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
++---Registers : 
+	               64 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      9 Bit        Muxes := 1     
+Module delay_buffer__parameterized15 
+Detailed RTL Component Info : 
++---Registers : 
+	               64 Bit    Registers := 2     
+Module delay_buffer__parameterized16 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module butterfly__parameterized7 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     64 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 1     
+Module complex_mul__9 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   3 Input     32 Bit       Adders := 1     
++---Multipliers : 
+	                32x32  Multipliers := 4     
+Module sdf_unit__parameterized7 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
++---Registers : 
+	               64 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      9 Bit        Muxes := 1     
+Module delay_buffer__parameterized17 
+Detailed RTL Component Info : 
++---Registers : 
+	               64 Bit    Registers := 1     
+Module delay_buffer__parameterized18 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module butterfly__parameterized8 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     64 Bit       Adders := 1     
+	   2 Input      1 Bit       Adders := 1     
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 1     
+Module complex_mul 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   3 Input     32 Bit       Adders := 1     
++---Multipliers : 
+	                32x32  Multipliers := 4     
+Module sdf_unit__parameterized8 
+Detailed RTL Component Info : 
++---Registers : 
+	               64 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      9 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 740 (col length:100)
+BRAMs: 730 (col length: RAMB18 100 RAMB36 50)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/complex_mul.v:65]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/complex_mul.v:64]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/complex_mul.v:66]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/complex_mul.v:63]
+DSP Report: Generating DSP inst_complex_mul/ditr, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: Generating DSP inst_complex_mul/ditr, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: Generating DSP inst_complex_mul/ditr, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: Generating DSP inst_complex_mul/ditr, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: Generating DSP inst_complex_mul/drti, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: Generating DSP inst_complex_mul/drti, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: Generating DSP inst_complex_mul/drti, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: Generating DSP inst_complex_mul/drti, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: Generating DSP inst_complex_mul/diti, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: Generating DSP inst_complex_mul/diti, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: Generating DSP inst_complex_mul/diti, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: Generating DSP inst_complex_mul/diti, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: Generating DSP inst_complex_mul/drtr, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+DSP Report: Generating DSP inst_complex_mul/drtr, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+DSP Report: Generating DSP inst_complex_mul/drtr, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+DSP Report: Generating DSP inst_complex_mul/drtr, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/complex_mul.v:65]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/complex_mul.v:64]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/complex_mul.v:66]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/complex_mul.v:63]
+DSP Report: Generating DSP inst_complex_mul/ditr, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: Generating DSP inst_complex_mul/ditr, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: Generating DSP inst_complex_mul/ditr, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: Generating DSP inst_complex_mul/ditr, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: Generating DSP inst_complex_mul/drti, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: Generating DSP inst_complex_mul/drti, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: Generating DSP inst_complex_mul/drti, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: Generating DSP inst_complex_mul/drti, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: Generating DSP inst_complex_mul/diti, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: Generating DSP inst_complex_mul/diti, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: Generating DSP inst_complex_mul/diti, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: Generating DSP inst_complex_mul/diti, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: Generating DSP inst_complex_mul/drtr, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+DSP Report: Generating DSP inst_complex_mul/drtr, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+DSP Report: Generating DSP inst_complex_mul/drtr, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+DSP Report: Generating DSP inst_complex_mul/drtr, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/complex_mul.v:65]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/complex_mul.v:64]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/complex_mul.v:66]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/complex_mul.v:63]
+DSP Report: Generating DSP inst_complex_mul/ditr, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: Generating DSP inst_complex_mul/ditr, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: Generating DSP inst_complex_mul/ditr, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: Generating DSP inst_complex_mul/ditr, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: Generating DSP inst_complex_mul/drti, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: Generating DSP inst_complex_mul/drti, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: Generating DSP inst_complex_mul/drti, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: Generating DSP inst_complex_mul/drti, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: Generating DSP inst_complex_mul/diti, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: Generating DSP inst_complex_mul/diti, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: Generating DSP inst_complex_mul/diti, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: Generating DSP inst_complex_mul/diti, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: Generating DSP inst_complex_mul/drtr, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+DSP Report: Generating DSP inst_complex_mul/drtr, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+DSP Report: Generating DSP inst_complex_mul/drtr, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+DSP Report: Generating DSP inst_complex_mul/drtr, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/complex_mul.v:65]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/complex_mul.v:64]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/complex_mul.v:66]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/complex_mul.v:63]
+DSP Report: Generating DSP inst_complex_mul/ditr, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: Generating DSP inst_complex_mul/ditr, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: Generating DSP inst_complex_mul/ditr, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: Generating DSP inst_complex_mul/ditr, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: Generating DSP inst_complex_mul/drti, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: Generating DSP inst_complex_mul/drti, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: Generating DSP inst_complex_mul/drti, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: Generating DSP inst_complex_mul/drti, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: Generating DSP inst_complex_mul/diti, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: Generating DSP inst_complex_mul/diti, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: Generating DSP inst_complex_mul/diti, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: Generating DSP inst_complex_mul/diti, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: Generating DSP inst_complex_mul/drtr, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+DSP Report: Generating DSP inst_complex_mul/drtr, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+DSP Report: Generating DSP inst_complex_mul/drtr, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+DSP Report: Generating DSP inst_complex_mul/drtr, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/complex_mul.v:65]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/complex_mul.v:64]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/complex_mul.v:66]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/complex_mul.v:63]
+DSP Report: Generating DSP inst_complex_mul/ditr, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: Generating DSP inst_complex_mul/ditr, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: Generating DSP inst_complex_mul/ditr, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: Generating DSP inst_complex_mul/ditr, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: Generating DSP inst_complex_mul/drti, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: Generating DSP inst_complex_mul/drti, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: Generating DSP inst_complex_mul/drti, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: Generating DSP inst_complex_mul/drti, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: Generating DSP inst_complex_mul/diti, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: Generating DSP inst_complex_mul/diti, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: Generating DSP inst_complex_mul/diti, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: Generating DSP inst_complex_mul/diti, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: Generating DSP inst_complex_mul/drtr, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+DSP Report: Generating DSP inst_complex_mul/drtr, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+DSP Report: Generating DSP inst_complex_mul/drtr, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+DSP Report: Generating DSP inst_complex_mul/drtr, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/complex_mul.v:65]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/complex_mul.v:64]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/complex_mul.v:66]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/complex_mul.v:63]
+DSP Report: Generating DSP inst_complex_mul/ditr, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: Generating DSP inst_complex_mul/ditr, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: Generating DSP inst_complex_mul/ditr, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: Generating DSP inst_complex_mul/ditr, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: Generating DSP inst_complex_mul/drti, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: Generating DSP inst_complex_mul/drti, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: Generating DSP inst_complex_mul/drti, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: Generating DSP inst_complex_mul/drti, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: Generating DSP inst_complex_mul/diti, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: Generating DSP inst_complex_mul/diti, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: Generating DSP inst_complex_mul/diti, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: Generating DSP inst_complex_mul/diti, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: Generating DSP inst_complex_mul/drtr, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+DSP Report: Generating DSP inst_complex_mul/drtr, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+DSP Report: Generating DSP inst_complex_mul/drtr, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+DSP Report: Generating DSP inst_complex_mul/drtr, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/complex_mul.v:65]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/complex_mul.v:64]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/complex_mul.v:66]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/complex_mul.v:63]
+DSP Report: Generating DSP inst_complex_mul/ditr, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: Generating DSP inst_complex_mul/ditr, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: Generating DSP inst_complex_mul/ditr, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: Generating DSP inst_complex_mul/ditr, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: Generating DSP inst_complex_mul/drti, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: Generating DSP inst_complex_mul/drti, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: Generating DSP inst_complex_mul/drti, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: Generating DSP inst_complex_mul/drti, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: Generating DSP inst_complex_mul/diti, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: Generating DSP inst_complex_mul/diti, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: Generating DSP inst_complex_mul/diti, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: Generating DSP inst_complex_mul/diti, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: Generating DSP inst_complex_mul/drtr, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+DSP Report: Generating DSP inst_complex_mul/drtr, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+DSP Report: Generating DSP inst_complex_mul/drtr, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+DSP Report: Generating DSP inst_complex_mul/drtr, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/complex_mul.v:65]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/complex_mul.v:64]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/complex_mul.v:66]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/complex_mul.v:63]
+DSP Report: Generating DSP inst_complex_mul/ditr, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: Generating DSP inst_complex_mul/ditr, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: Generating DSP inst_complex_mul/ditr, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: Generating DSP inst_complex_mul/ditr, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: Generating DSP inst_complex_mul/drti, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: Generating DSP inst_complex_mul/drti, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: Generating DSP inst_complex_mul/drti, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: Generating DSP inst_complex_mul/drti, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: Generating DSP inst_complex_mul/diti, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: Generating DSP inst_complex_mul/diti, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: Generating DSP inst_complex_mul/diti, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: Generating DSP inst_complex_mul/diti, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: Generating DSP inst_complex_mul/drtr, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+DSP Report: Generating DSP inst_complex_mul/drtr, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+DSP Report: Generating DSP inst_complex_mul/drtr, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+DSP Report: Generating DSP inst_complex_mul/drtr, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/complex_mul.v:65]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/complex_mul.v:64]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/complex_mul.v:66]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/complex_mul.v:63]
+DSP Report: Generating DSP inst_complex_mul/ditr, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: Generating DSP inst_complex_mul/ditr, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: Generating DSP inst_complex_mul/ditr, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: Generating DSP inst_complex_mul/ditr, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: Generating DSP inst_complex_mul/drti, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: Generating DSP inst_complex_mul/drti, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: Generating DSP inst_complex_mul/drti, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: Generating DSP inst_complex_mul/drti, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: Generating DSP inst_complex_mul/diti, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: Generating DSP inst_complex_mul/diti, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: Generating DSP inst_complex_mul/diti, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: Generating DSP inst_complex_mul/diti, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: Generating DSP inst_complex_mul/drtr, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+DSP Report: Generating DSP inst_complex_mul/drtr, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+DSP Report: Generating DSP inst_complex_mul/drtr, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+DSP Report: Generating DSP inst_complex_mul/drtr, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/complex_mul.v:65]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/complex_mul.v:64]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/complex_mul.v:66]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/complex_mul.v:63]
+DSP Report: Generating DSP inst_complex_mul/ditr, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: Generating DSP inst_complex_mul/ditr, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: Generating DSP inst_complex_mul/ditr, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: Generating DSP inst_complex_mul/ditr, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: operator inst_complex_mul/ditr is absorbed into DSP inst_complex_mul/ditr.
+DSP Report: Generating DSP inst_complex_mul/drti, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: Generating DSP inst_complex_mul/drti, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: Generating DSP inst_complex_mul/drti, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: Generating DSP inst_complex_mul/drti, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: operator inst_complex_mul/drti is absorbed into DSP inst_complex_mul/drti.
+DSP Report: Generating DSP inst_complex_mul/diti, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: Generating DSP inst_complex_mul/diti, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: Generating DSP inst_complex_mul/diti, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: Generating DSP inst_complex_mul/diti, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: operator inst_complex_mul/diti is absorbed into DSP inst_complex_mul/diti.
+DSP Report: Generating DSP inst_complex_mul/drtr, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+DSP Report: Generating DSP inst_complex_mul/drtr, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+DSP Report: Generating DSP inst_complex_mul/drtr, operation Mode is: A*B.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+DSP Report: Generating DSP inst_complex_mul/drtr, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+DSP Report: operator inst_complex_mul/drtr is absorbed into DSP inst_complex_mul/drtr.
+INFO: [Synth 8-3886] merging instance 'twiddle_rom_1024:/dout_imag_reg[16]' (FDE) to 'twiddle_rom_1024:/dout_imag_reg[31]'
+INFO: [Synth 8-3886] merging instance 'twiddle_rom_1024:/dout_imag_reg[17]' (FDE) to 'twiddle_rom_1024:/dout_imag_reg[31]'
+INFO: [Synth 8-3886] merging instance 'twiddle_rom_1024:/dout_imag_reg[18]' (FDE) to 'twiddle_rom_1024:/dout_imag_reg[31]'
+INFO: [Synth 8-3886] merging instance 'twiddle_rom_1024:/dout_imag_reg[19]' (FDE) to 'twiddle_rom_1024:/dout_imag_reg[31]'
+INFO: [Synth 8-3886] merging instance 'twiddle_rom_1024:/dout_imag_reg[20]' (FDE) to 'twiddle_rom_1024:/dout_imag_reg[31]'
+INFO: [Synth 8-3886] merging instance 'twiddle_rom_1024:/dout_imag_reg[21]' (FDE) to 'twiddle_rom_1024:/dout_imag_reg[31]'
+INFO: [Synth 8-3886] merging instance 'twiddle_rom_1024:/dout_imag_reg[22]' (FDE) to 'twiddle_rom_1024:/dout_imag_reg[31]'
+INFO: [Synth 8-3886] merging instance 'twiddle_rom_1024:/dout_imag_reg[23]' (FDE) to 'twiddle_rom_1024:/dout_imag_reg[31]'
+INFO: [Synth 8-3886] merging instance 'twiddle_rom_1024:/dout_imag_reg[24]' (FDE) to 'twiddle_rom_1024:/dout_imag_reg[31]'
+INFO: [Synth 8-3886] merging instance 'twiddle_rom_1024:/dout_imag_reg[25]' (FDE) to 'twiddle_rom_1024:/dout_imag_reg[31]'
+INFO: [Synth 8-3886] merging instance 'twiddle_rom_1024:/dout_imag_reg[26]' (FDE) to 'twiddle_rom_1024:/dout_imag_reg[31]'
+INFO: [Synth 8-3886] merging instance 'twiddle_rom_1024:/dout_imag_reg[27]' (FDE) to 'twiddle_rom_1024:/dout_imag_reg[31]'
+INFO: [Synth 8-3886] merging instance 'twiddle_rom_1024:/dout_imag_reg[28]' (FDE) to 'twiddle_rom_1024:/dout_imag_reg[31]'
+INFO: [Synth 8-3886] merging instance 'twiddle_rom_1024:/dout_imag_reg[29]' (FDE) to 'twiddle_rom_1024:/dout_imag_reg[31]'
+INFO: [Synth 8-3886] merging instance 'twiddle_rom_1024:/dout_imag_reg[30]' (FDE) to 'twiddle_rom_1024:/dout_imag_reg[31]'
+INFO: [Synth 8-3886] merging instance 's7_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[0]' (FDE) to 's7_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[4]'
+INFO: [Synth 8-3886] merging instance 's7_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[1]' (FDE) to 's7_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[7]'
+INFO: [Synth 8-3886] merging instance 's7_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[2]' (FDE) to 's7_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[8]'
+INFO: [Synth 8-3886] merging instance 's7_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[3]' (FDE) to 's7_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[9]'
+INFO: [Synth 8-3886] merging instance 's7_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[4]' (FDE) to 's7_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[5]'
+INFO: [Synth 8-3886] merging instance 's7_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[5]' (FDE) to 's7_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[6]'
+INFO: [Synth 8-3886] merging instance 's7_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[7]' (FDE) to 's7_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[14]'
+INFO: [Synth 8-3886] merging instance 's7_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[10]' (FDE) to 's7_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[15]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s7_sdf_unit/u_twiddle_rom_1024 /\dout_imag_reg[13] )
+INFO: [Synth 8-3886] merging instance 's8_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[0]' (FDE) to 's8_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[1]'
+INFO: [Synth 8-3886] merging instance 's8_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[1]' (FDE) to 's8_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[3]'
+INFO: [Synth 8-3886] merging instance 's8_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[2]' (FDE) to 's8_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[8]'
+INFO: [Synth 8-3886] merging instance 's8_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[3]' (FDE) to 's8_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[4]'
+INFO: [Synth 8-3886] merging instance 's8_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[4]' (FDE) to 's8_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[5]'
+INFO: [Synth 8-3886] merging instance 's8_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[5]' (FDE) to 's8_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[6]'
+INFO: [Synth 8-3886] merging instance 's8_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[6]' (FDE) to 's8_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[7]'
+INFO: [Synth 8-3886] merging instance 's8_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[7]' (FDE) to 's8_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[9]'
+INFO: [Synth 8-3886] merging instance 's8_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[8]' (FDE) to 's8_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[10]'
+INFO: [Synth 8-3886] merging instance 's8_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[9]' (FDE) to 's8_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[11]'
+INFO: [Synth 8-3886] merging instance 's8_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[10]' (FDE) to 's8_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[12]'
+INFO: [Synth 8-3886] merging instance 's8_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[11]' (FDE) to 's8_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[14]'
+INFO: [Synth 8-3886] merging instance 's8_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[12]' (FDE) to 's8_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[13]'
+INFO: [Synth 8-3886] merging instance 's8_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[13]' (FDE) to 's8_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[15]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s8_sdf_unit/u_twiddle_rom_1024 /\dout_imag_reg[15] )
+INFO: [Synth 8-3886] merging instance 's9_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[0]' (FDE) to 's9_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[1]'
+INFO: [Synth 8-3886] merging instance 's9_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[1]' (FDE) to 's9_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[2]'
+INFO: [Synth 8-3886] merging instance 's9_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[2]' (FDE) to 's9_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[3]'
+INFO: [Synth 8-3886] merging instance 's9_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[3]' (FDE) to 's9_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[4]'
+INFO: [Synth 8-3886] merging instance 's9_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[4]' (FDE) to 's9_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[5]'
+INFO: [Synth 8-3886] merging instance 's9_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[5]' (FDE) to 's9_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[6]'
+INFO: [Synth 8-3886] merging instance 's9_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[6]' (FDE) to 's9_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[7]'
+INFO: [Synth 8-3886] merging instance 's9_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[7]' (FDE) to 's9_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[8]'
+INFO: [Synth 8-3886] merging instance 's9_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[8]' (FDE) to 's9_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[9]'
+INFO: [Synth 8-3886] merging instance 's9_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[9]' (FDE) to 's9_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[10]'
+INFO: [Synth 8-3886] merging instance 's9_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[10]' (FDE) to 's9_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[11]'
+INFO: [Synth 8-3886] merging instance 's9_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[11]' (FDE) to 's9_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[12]'
+INFO: [Synth 8-3886] merging instance 's9_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[12]' (FDE) to 's9_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[13]'
+INFO: [Synth 8-3886] merging instance 's9_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[13]' (FDE) to 's9_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[14]'
+INFO: [Synth 8-3886] merging instance 's9_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[14]' (FDE) to 's9_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[15]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s9_sdf_unit/u_twiddle_rom_1024 /\dout_imag_reg[15] )
+INFO: [Synth 8-3886] merging instance 's10_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[0]' (FDE) to 's10_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[1]'
+INFO: [Synth 8-3886] merging instance 's10_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[1]' (FDE) to 's10_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[2]'
+INFO: [Synth 8-3886] merging instance 's10_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[2]' (FDE) to 's10_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[3]'
+INFO: [Synth 8-3886] merging instance 's10_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[3]' (FDE) to 's10_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[4]'
+INFO: [Synth 8-3886] merging instance 's10_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[4]' (FDE) to 's10_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[5]'
+INFO: [Synth 8-3886] merging instance 's10_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[5]' (FDE) to 's10_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[6]'
+INFO: [Synth 8-3886] merging instance 's10_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[6]' (FDE) to 's10_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[7]'
+INFO: [Synth 8-3886] merging instance 's10_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[7]' (FDE) to 's10_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[8]'
+INFO: [Synth 8-3886] merging instance 's10_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[8]' (FDE) to 's10_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[9]'
+INFO: [Synth 8-3886] merging instance 's10_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[9]' (FDE) to 's10_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[10]'
+INFO: [Synth 8-3886] merging instance 's10_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[10]' (FDE) to 's10_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[11]'
+INFO: [Synth 8-3886] merging instance 's10_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[11]' (FDE) to 's10_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[12]'
+INFO: [Synth 8-3886] merging instance 's10_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[12]' (FDE) to 's10_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[13]'
+INFO: [Synth 8-3886] merging instance 's10_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[13]' (FDE) to 's10_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[14]'
+INFO: [Synth 8-3886] merging instance 's10_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[14]' (FDE) to 's10_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[15]'
+INFO: [Synth 8-3886] merging instance 's10_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[15]' (FDE) to 's10_sdf_unit/u_twiddle_rom_1024/dout_imag_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s10_sdf_unit/u_twiddle_rom_1024 /\dout_imag_reg[31] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 815.438 ; gain = 510.785
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++-----------------+---------------+---------------+----------------+
+|Module Name      | RTL Object    | Depth x Width | Implemented As | 
++-----------------+---------------+---------------+----------------+
+|twiddle_rom_1024 | dout_real_reg | 512x32        | Block RAM      | 
++-----------------+---------------+---------------+----------------+
+
+
+DSP: Preliminary Mapping  Report (see note below)
++-----------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name      | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-----------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|sdf_fft_1024_top | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|sdf_fft_1024_top | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++-----------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance s1_sdf_unit/u_twiddle_rom_1024/i_1/dout_real_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance s1_sdf_unit/u_twiddle_rom_1024/i_1/dout_real_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-6837] The timing for the instance s2_sdf_unit/u_twiddle_rom_1024/i_1/dout_real_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance s2_sdf_unit/u_twiddle_rom_1024/i_1/dout_real_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-6837] The timing for the instance s3_sdf_unit/u_twiddle_rom_1024/i_1/dout_real_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance s3_sdf_unit/u_twiddle_rom_1024/i_1/dout_real_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-6837] The timing for the instance s4_sdf_unit/u_twiddle_rom_1024/i_1/dout_real_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance s4_sdf_unit/u_twiddle_rom_1024/i_1/dout_real_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-6837] The timing for the instance s5_sdf_unit/u_twiddle_rom_1024/i_1/dout_real_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance s5_sdf_unit/u_twiddle_rom_1024/i_1/dout_real_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-6837] The timing for the instance s6_sdf_unit/u_twiddle_rom_1024/i_1/dout_real_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance s6_sdf_unit/u_twiddle_rom_1024/i_1/dout_real_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-6837] The timing for the instance s7_sdf_unit/u_twiddle_rom_1024/i_1/dout_real_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance s7_sdf_unit/u_twiddle_rom_1024/i_1/dout_real_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.srcs/sources_1/new/sdf_unit.v:56]
+INFO: [Common 17-14] Message 'Synth 8-5844' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-6837] The timing for the instance s8_sdf_unit/u_twiddle_rom_1024/i_1/dout_real_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance s8_sdf_unit/u_twiddle_rom_1024/i_1/dout_real_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance s9_sdf_unit/u_twiddle_rom_1024/i_1/dout_real_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance s9_sdf_unit/u_twiddle_rom_1024/i_1/dout_real_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance s10_sdf_unit/u_twiddle_rom_1024/i_1/dout_real_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance s10_sdf_unit/u_twiddle_rom_1024/i_1/dout_real_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+
+Report RTL Partitions: 
++------+------------------------------+------------+----------+
+|      |RTL Partition                 |Replication |Instances |
++------+------------------------------+------------+----------+
+|1     |twiddle_rom_1024              |           1|      1031|
+|2     |sdf_unit__GC0                 |           1|     34206|
+|3     |sdf_unit__parameterized0__GC0 |           1|     17557|
+|4     |sdf_unit__parameterized1__GC0 |           1|      9219|
+|5     |sdf_unit__parameterized2__GC0 |           1|      5052|
+|6     |sdf_unit__parameterized3__GC0 |           1|      2965|
+|7     |sdf_unit__parameterized4__GC0 |           1|      1918|
+|8     |sdf_unit__parameterized5__GC0 |           1|      1391|
+|9     |sdf_unit__parameterized6__GC0 |           1|      1124|
+|10    |sdf_unit__parameterized7__GC0 |           1|       988|
+|11    |sdf_unit__parameterized8__GC0 |           1|       915|
+|12    |twiddle_rom_1024__1           |           1|       626|
+|13    |twiddle_rom_1024__2           |           1|       382|
+|14    |twiddle_rom_1024__3           |           1|       240|
+|15    |twiddle_rom_1024__4           |           1|       135|
+|16    |twiddle_rom_1024__5           |           1|        74|
+|17    |twiddle_rom_1024__6           |           1|        21|
+|18    |twiddle_rom_1024__7           |           1|         4|
+|19    |twiddle_rom_1024__8           |           1|         2|
+|20    |twiddle_rom_1024__9           |           1|         1|
++------+------------------------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:29 . Memory (MB): peak = 815.438 ; gain = 510.785
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+------------------------------+------------+----------+
+|      |RTL Partition                 |Replication |Instances |
++------+------------------------------+------------+----------+
+|1     |twiddle_rom_1024              |           1|      1031|
+|2     |sdf_unit__GC0                 |           1|     34206|
+|3     |sdf_unit__parameterized0__GC0 |           1|     17557|
+|4     |sdf_unit__parameterized1__GC0 |           1|      9219|
+|5     |sdf_unit__parameterized2__GC0 |           1|      5052|
+|6     |sdf_unit__parameterized3__GC0 |           1|      2965|
+|7     |sdf_unit__parameterized4__GC0 |           1|      1918|
+|8     |sdf_unit__parameterized5__GC0 |           1|      1391|
+|9     |sdf_unit__parameterized6__GC0 |           1|      1124|
+|10    |sdf_unit__parameterized7__GC0 |           1|       988|
+|11    |sdf_unit__parameterized8__GC0 |           1|       915|
+|12    |twiddle_rom_1024__1           |           1|       626|
+|13    |twiddle_rom_1024__2           |           1|       382|
+|14    |twiddle_rom_1024__3           |           1|       240|
+|15    |twiddle_rom_1024__4           |           1|       135|
+|16    |twiddle_rom_1024__5           |           1|        74|
+|17    |twiddle_rom_1024__6           |           1|        21|
+|18    |twiddle_rom_1024__7           |           1|         4|
+|19    |twiddle_rom_1024__8           |           1|         2|
+|20    |twiddle_rom_1024__9           |           1|         1|
++------+------------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance s1_sdf_unit/u_twiddle_rom_1024/dout_real_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance s1_sdf_unit/u_twiddle_rom_1024/dout_real_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance s2_sdf_unit/u_twiddle_rom_1024/dout_real_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance s2_sdf_unit/u_twiddle_rom_1024/dout_real_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance s3_sdf_unit/u_twiddle_rom_1024/dout_real_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance s3_sdf_unit/u_twiddle_rom_1024/dout_real_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance s4_sdf_unit/u_twiddle_rom_1024/dout_real_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance s4_sdf_unit/u_twiddle_rom_1024/dout_real_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance s5_sdf_unit/u_twiddle_rom_1024/dout_real_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance s5_sdf_unit/u_twiddle_rom_1024/dout_real_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance s6_sdf_unit/u_twiddle_rom_1024/dout_real_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance s6_sdf_unit/u_twiddle_rom_1024/dout_real_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance s7_sdf_unit/u_twiddle_rom_1024/dout_real_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance s7_sdf_unit/u_twiddle_rom_1024/dout_real_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance s8_sdf_unit/u_twiddle_rom_1024/dout_real_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance s8_sdf_unit/u_twiddle_rom_1024/dout_real_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance s9_sdf_unit/u_twiddle_rom_1024/dout_real_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance s9_sdf_unit/u_twiddle_rom_1024/dout_real_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance s10_sdf_unit/u_twiddle_rom_1024/dout_real_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance s10_sdf_unit/u_twiddle_rom_1024/dout_real_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:33 . Memory (MB): peak = 822.973 ; gain = 518.320
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:34 . Memory (MB): peak = 822.973 ; gain = 518.320
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:34 . Memory (MB): peak = 822.973 ; gain = 518.320
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:35 . Memory (MB): peak = 822.973 ; gain = 518.320
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:35 . Memory (MB): peak = 822.973 ; gain = 518.320
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:35 . Memory (MB): peak = 822.973 ; gain = 518.320
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:29 ; elapsed = 00:00:35 . Memory (MB): peak = 822.973 ; gain = 518.320
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------------------------+-----------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name                   | RTL Name                                                              | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------------------------+-----------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|sdf_unit__GC0                 | inst_butterfly/inst_data_delay_buffer/buffer_reg[511][63]             | 512    | 64    | NO           | YES                | YES               | 0      | 1024    | 
+|sdf_unit__GC0                 | inst_butterfly/inst_en_delay_buffer/buffer_reg[511][0]                | 512    | 1     | NO           | NO                 | NO                | 0      | 16      | 
+|sdf_unit__parameterized0__GC0 | inst_butterfly/inst_data_delay_buffer/buffer_reg[255][63]             | 256    | 64    | NO           | YES                | YES               | 0      | 512     | 
+|sdf_unit__parameterized0__GC0 | inst_butterfly/inst_en_delay_buffer/buffer_reg[255][0]                | 256    | 1     | NO           | NO                 | NO                | 0      | 8       | 
+|sdf_fft_1024_top              | s3_sdf_unit/inst_butterfly/inst_data_delay_buffer/buffer_reg[127][63] | 128    | 64    | NO           | YES                | YES               | 0      | 256     | 
+|sdf_fft_1024_top              | s3_sdf_unit/inst_butterfly/inst_en_delay_buffer/buffer_reg[127][0]    | 128    | 1     | NO           | NO                 | NO                | 0      | 4       | 
+|sdf_fft_1024_top              | s4_sdf_unit/inst_butterfly/inst_data_delay_buffer/buffer_reg[63][63]  | 64     | 64    | NO           | YES                | YES               | 0      | 128     | 
+|sdf_fft_1024_top              | s4_sdf_unit/inst_butterfly/inst_en_delay_buffer/buffer_reg[63][0]     | 64     | 1     | NO           | NO                 | NO                | 0      | 2       | 
+|sdf_fft_1024_top              | s5_sdf_unit/inst_butterfly/inst_data_delay_buffer/buffer_reg[31][63]  | 32     | 64    | NO           | YES                | YES               | 0      | 64      | 
+|sdf_fft_1024_top              | s5_sdf_unit/inst_butterfly/inst_en_delay_buffer/buffer_reg[31][0]     | 32     | 1     | NO           | NO                 | NO                | 0      | 1       | 
+|sdf_fft_1024_top              | s6_sdf_unit/inst_butterfly/inst_data_delay_buffer/buffer_reg[15][63]  | 16     | 64    | NO           | YES                | YES               | 64     | 0       | 
+|sdf_fft_1024_top              | s6_sdf_unit/inst_butterfly/inst_en_delay_buffer/buffer_reg[15][0]     | 16     | 1     | NO           | NO                 | NO                | 1      | 0       | 
+|sdf_fft_1024_top              | s7_sdf_unit/inst_butterfly/inst_data_delay_buffer/buffer_reg[7][63]   | 8      | 64    | NO           | YES                | YES               | 64     | 0       | 
+|sdf_fft_1024_top              | s7_sdf_unit/inst_butterfly/inst_en_delay_buffer/buffer_reg[7][0]      | 8      | 1     | NO           | NO                 | NO                | 1      | 0       | 
+|sdf_fft_1024_top              | s8_sdf_unit/inst_butterfly/inst_data_delay_buffer/buffer_reg[3][63]   | 4      | 64    | NO           | YES                | YES               | 64     | 0       | 
+|sdf_fft_1024_top              | s8_sdf_unit/inst_butterfly/inst_en_delay_buffer/buffer_reg[3][0]      | 4      | 1     | NO           | NO                 | NO                | 1      | 0       | 
++------------------------------+-----------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     1|
+|2     |CARRY4   |   960|
+|3     |DSP48E1  |   160|
+|4     |LUT1     |    15|
+|5     |LUT2     |  3172|
+|6     |LUT3     |  1317|
+|7     |LUT4     |    43|
+|8     |LUT5     |    53|
+|9     |LUT6     |   263|
+|10    |MUXF7    |   101|
+|11    |MUXF8    |    15|
+|12    |RAMB18E1 |    10|
+|13    |SRL16E   |   195|
+|14    |SRLC32E  |  2015|
+|15    |FDCE     |   767|
+|16    |FDRE     |  1219|
+|17    |IBUF     |    67|
+|18    |OBUF     |    65|
++------+---------+------+
+
+Report Instance Areas: 
++------+-----------------------------+------------------------------+------+
+|      |Instance                     |Module                        |Cells |
++------+-----------------------------+------------------------------+------+
+|1     |top                          |                              | 10438|
+|2     |  s10_sdf_unit               |sdf_unit__parameterized8      |   689|
+|3     |    inst_butterfly           |butterfly__parameterized8     |   290|
+|4     |      inst_data_delay_buffer |delay_buffer__parameterized17 |   271|
+|5     |      inst_en_delay_buffer   |delay_buffer__parameterized18 |     1|
+|6     |    inst_complex_mul         |complex_mul_16                |   332|
+|7     |    u_twiddle_rom_1024       |twiddle_rom_1024_17           |     1|
+|8     |  s1_sdf_unit                |sdf_unit                      |  2027|
+|9     |    inst_butterfly           |butterfly                     |  1427|
+|10    |      inst_data_delay_buffer |delay_buffer                  |  1359|
+|11    |      inst_en_delay_buffer   |delay_buffer__parameterized0  |    16|
+|12    |    inst_complex_mul         |complex_mul_14                |   332|
+|13    |    u_twiddle_rom_1024       |twiddle_rom_1024_15           |   193|
+|14    |  s2_sdf_unit                |sdf_unit__parameterized0      |  1421|
+|15    |    inst_butterfly           |butterfly__parameterized0     |   904|
+|16    |      inst_data_delay_buffer |delay_buffer__parameterized1  |   847|
+|17    |      inst_en_delay_buffer   |delay_buffer__parameterized2  |     8|
+|18    |    inst_complex_mul         |complex_mul_12                |   332|
+|19    |    u_twiddle_rom_1024       |twiddle_rom_1024_13           |   111|
+|20    |  s3_sdf_unit                |sdf_unit__parameterized1      |  1096|
+|21    |    inst_butterfly           |butterfly__parameterized1     |   640|
+|22    |      inst_data_delay_buffer |delay_buffer__parameterized3  |   591|
+|23    |      inst_en_delay_buffer   |delay_buffer__parameterized4  |     4|
+|24    |    inst_complex_mul         |complex_mul_10                |   332|
+|25    |    u_twiddle_rom_1024       |twiddle_rom_1024_11           |    51|
+|26    |  s4_sdf_unit                |sdf_unit__parameterized2      |   930|
+|27    |    inst_butterfly           |butterfly__parameterized2     |   508|
+|28    |      inst_data_delay_buffer |delay_buffer__parameterized5  |   463|
+|29    |      inst_en_delay_buffer   |delay_buffer__parameterized6  |     2|
+|30    |    inst_complex_mul         |complex_mul_8                 |   332|
+|31    |    u_twiddle_rom_1024       |twiddle_rom_1024_9            |    18|
+|32    |  s5_sdf_unit                |sdf_unit__parameterized3      |   859|
+|33    |    inst_butterfly           |butterfly__parameterized3     |   438|
+|34    |      inst_data_delay_buffer |delay_buffer__parameterized7  |   399|
+|35    |      inst_en_delay_buffer   |delay_buffer__parameterized8  |     1|
+|36    |    inst_complex_mul         |complex_mul_6                 |   332|
+|37    |    u_twiddle_rom_1024       |twiddle_rom_1024_7            |    18|
+|38    |  s6_sdf_unit                |sdf_unit__parameterized4      |   854|
+|39    |    inst_butterfly           |butterfly__parameterized4     |   434|
+|40    |      inst_data_delay_buffer |delay_buffer__parameterized9  |   399|
+|41    |      inst_en_delay_buffer   |delay_buffer__parameterized10 |     1|
+|42    |    inst_complex_mul         |complex_mul_4                 |   332|
+|43    |    u_twiddle_rom_1024       |twiddle_rom_1024_5            |    18|
+|44    |  s7_sdf_unit                |sdf_unit__parameterized5      |   840|
+|45    |    inst_butterfly           |butterfly__parameterized5     |   432|
+|46    |      inst_data_delay_buffer |delay_buffer__parameterized11 |   399|
+|47    |      inst_en_delay_buffer   |delay_buffer__parameterized12 |     1|
+|48    |    inst_complex_mul         |complex_mul_2                 |   332|
+|49    |    u_twiddle_rom_1024       |twiddle_rom_1024_3            |     8|
+|50    |  s8_sdf_unit                |sdf_unit__parameterized6      |   828|
+|51    |    inst_butterfly           |butterfly__parameterized6     |   427|
+|52    |      inst_data_delay_buffer |delay_buffer__parameterized13 |   399|
+|53    |      inst_en_delay_buffer   |delay_buffer__parameterized14 |     1|
+|54    |    inst_complex_mul         |complex_mul_0                 |   332|
+|55    |    u_twiddle_rom_1024       |twiddle_rom_1024_1            |     2|
+|56    |  s9_sdf_unit                |sdf_unit__parameterized7      |   761|
+|57    |    inst_butterfly           |butterfly__parameterized7     |   362|
+|58    |      inst_data_delay_buffer |delay_buffer__parameterized15 |   335|
+|59    |      inst_en_delay_buffer   |delay_buffer__parameterized16 |     2|
+|60    |    inst_complex_mul         |complex_mul                   |   332|
+|61    |    u_twiddle_rom_1024       |twiddle_rom_1024              |     1|
++------+-----------------------------+------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:35 . Memory (MB): peak = 822.973 ; gain = 518.320
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:29 ; elapsed = 00:00:35 . Memory (MB): peak = 822.973 ; gain = 518.320
+Synthesis Optimization Complete : Time (s): cpu = 00:00:29 ; elapsed = 00:00:35 . Memory (MB): peak = 822.973 ; gain = 518.320
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 1246 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 822.973 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+354 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:42 . Memory (MB): peak = 822.973 ; gain = 531.156
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 822.973 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'D:/study_file/SEU/GoodwayHouse/SDF_FFT/output/SDF_FFT_1024/SDF_FFT_1024.runs/synth_1/sdf_fft_1024_top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file sdf_fft_1024_top_utilization_synth.rpt -pb sdf_fft_1024_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Apr 18 14:09:13 2023...
