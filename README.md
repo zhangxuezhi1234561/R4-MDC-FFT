@@ -1,6 +1,6 @@
 ### 基于FPGA的FFT算法并行优化
 
-源代码路径  R4_MDC/1_SourceCode/vivado2018.3_prj/SDF_FFT_1024.srcs/sources_1/new
+**核心源代码路径  R4_MDC/1_SourceCode/vivado2018.3_prj/SDF_FFT_1024.srcs/sources_1/new**
 
 使用Xilinx Zyqn7000系列开发板，并结合ModelSim与Matlab进行软件仿真，采用四级流水线，在FPGA中部署基4DIF MDC算法，完成对快速傅里叶变换的并行优化。
 
